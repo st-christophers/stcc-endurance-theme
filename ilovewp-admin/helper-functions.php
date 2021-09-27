@@ -32,6 +32,7 @@ if( ! function_exists( 'ilovewp_helper_display_title' ) ) {
 	function ilovewp_helper_display_title($post) {
 
 		if( ! is_object( $post ) ) return;
+		if( is_front_page() ) return;
 		the_title( '<h1 class="page-title"><span class="page-title-span">', '</span></h1>' );
 	}
 }
@@ -39,7 +40,7 @@ if( ! function_exists( 'ilovewp_helper_display_title' ) ) {
 // Page/Post Title
 if( ! function_exists( 'ilovewp_helper_display_datetime' ) ) {
 	function ilovewp_helper_display_datetime($post) {
-		
+
 		if( ! is_object( $post ) ) return;
 
 		return '<p class="entry-descriptor"><span class="entry-descriptor-span"><time class="entry-date published" datetime="' . esc_attr(get_the_date('c')) . '">' . get_the_date() . '</time></span></p>';
@@ -82,9 +83,9 @@ if( ! function_exists( 'ilovewp_helper_display_content' ) ) {
 		if( ! is_object( $post ) ) return;
 
 		echo '<div class="entry-content">';
-			
+
 			the_content();
-			
+
 			wp_link_pages(array('before' => '<p class="page-navigation"><strong>'.__('Pages', 'endurance').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number'));
 
 		echo '</div><!-- .entry-content -->';
@@ -98,7 +99,7 @@ if( ! function_exists( 'ilovewp_helper_display_tags' ) ) {
 
 		if( ! is_object( $post ) ) return;
 
-		if ( get_post_type($post->ID) == 'post' ) { 
+		if ( get_post_type($post->ID) == 'post' ) {
 			the_tags( '<p class="post-meta post-tags"><strong>'.__('Tags', 'endurance').':</strong> ', ', ', '</p>');
 		}
 
@@ -111,7 +112,7 @@ if( ! function_exists( 'ilovewp_helper_display_postmeta' ) ) {
 
 		if( ! is_object( $post ) ) return;
 
-		if ( get_post_type($post->ID) == 'post' ) { 
+		if ( get_post_type($post->ID) == 'post' ) {
 
 			echo '<p class="entry-tagline">';
 			echo '<span class="post-meta-span post-meta-span-time"><time datetime="' . esc_attr(get_the_time("Y-m-d")) . '" pubdate>' . esc_html(get_the_time(get_option('date_format'))) . '</time></span>';

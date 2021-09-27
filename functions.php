@@ -1,4 +1,4 @@
-<?php			
+<?php
 
 if ( ! isset( $content_width ) ) $content_width = 660;
 
@@ -59,12 +59,12 @@ function endurance_setup() {
         'comment-form', 'comment-list', 'gallery', 'caption'
     ) );
 
-	/* Add support for Custom Background 
+	/* Add support for Custom Background
 	==================================== */
-	
+
 	add_theme_support( 'custom-background' );
-	
-    /* Add support for Custom Logo 
+
+    /* Add support for Custom Logo
 	==================================== */
 
     add_theme_support( 'custom-logo', array(
@@ -76,8 +76,8 @@ function endurance_setup() {
 
 	/* Add support for post and comment RSS feed links in <head>
 	==================================== */
-	
-	add_theme_support( 'automatic-feed-links' ); 
+
+	add_theme_support( 'automatic-feed-links' );
 
     /*
      * Let WordPress manage the document title.
@@ -98,17 +98,17 @@ function endurance_setup() {
 
 	/* Add support for Localization
 	==================================== */
-	
+
 	load_theme_textdomain( 'endurance', get_template_directory() . '/languages' );
-	
+
 	$locale = get_locale();
 	$locale_file = get_template_directory() . "/languages/$locale.php";
 	if ( is_readable($locale_file) )
 		require_once($locale_file);
 
-	/* Add support for Custom Headers 
+	/* Add support for Custom Headers
 	==================================== */
-	
+
 	add_theme_support(
 		'custom-header', apply_filters(
 			'academia_custom_header_args', array(
@@ -119,7 +119,7 @@ function endurance_setup() {
 			)
 		)
 	);
-    
+
 	// Register nav menus
     register_nav_menus( array(
         'primary' => __( 'Main Menu', 'endurance' )
@@ -131,7 +131,7 @@ endif;
 add_action( 'after_setup_theme', 'endurance_setup' );
 
 add_filter( 'image_size_names_choose', 'endurance_custom_sizes' );
- 
+
 function endurance_custom_sizes( $sizes ) {
 	return array_merge( $sizes, array(
 		'endurance-thumb-slideshow' 		=> __( 'Featured Image: Slideshow Size', 'endurance' ),
@@ -151,9 +151,9 @@ if ( ! function_exists( 'endurance_fonts_url' ) ) :
  * @return string Google fonts URL for the theme.
  */
 function endurance_fonts_url() {
-	
+
 	$fonts_url = '';
-	$subsets   = 'latin,latin-ext';	
+	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Noto Sans, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Noto Sans font: on or off', 'endurance' ) ) {
@@ -175,7 +175,7 @@ function endurance_fonts_url() {
 }
 endif;
 
-/* Add javascripts and CSS used by the theme 
+/* Add javascripts and CSS used by the theme
 ================================== */
 
 function endurance_js_scripts() {
@@ -220,7 +220,7 @@ function endurance_js_scripts() {
 
 		/* Contains the strings used in our JavaScript file */
 		$enduranceStrings = array (
-			'slicknav_menu_home' => _x( 'Click for Menu', 'The main label for the expandable mobile menu', 'endurance' )
+			'slicknav_menu_home' => _x( 'Menu', 'The main label for the expandable mobile menu', 'endurance' )
 		);
 
 		wp_localize_script( 'endurance-scripts', 'enduranceStrings', $enduranceStrings );
@@ -231,9 +231,9 @@ function endurance_js_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 
 		/* Font-Awesome */
-		
+
 		wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', null, '4.7.0');
-		
+
 		// Loads our default Google Webfont
 		wp_enqueue_style( 'endurance-webfonts', endurance_fonts_url(), array(), null, null );
 
@@ -282,12 +282,12 @@ function endurance_excerpt($text)
 }
 add_filter('the_excerpt', 'endurance_excerpt');
 
-/* Convert HEX color to RGB value (for the customizer)						
+/* Convert HEX color to RGB value (for the customizer)
 ==================================== */
 
 function endurance_hex2rgb($hex) {
 	$hex = str_replace("#", "", $hex);
-	
+
 	if(strlen($hex) == 3) {
 		$r = hexdec(substr($hex,0,1).substr($hex,0,1));
 		$g = hexdec(substr($hex,1,1).substr($hex,1,1));
@@ -403,14 +403,14 @@ if ( ! function_exists( 'endurance_the_custom_logo' ) ) {
 
 	function endurance_the_custom_logo() {
 		if ( function_exists( 'the_custom_logo' ) ) {
-			
+
 			// We don't use the default the_custom_logo() function because of its automatic addition of itemprop attributes (they fail the ARIA tests)
-			
+
 			$site = get_bloginfo('name');
 			$custom_logo_id = get_theme_mod( 'custom_logo' );
 
 			if ( $custom_logo_id ) {
-			$html = sprintf( '<a href="%1$s" class="custom-logo-link" rel="home">%2$s</a>', 
+			$html = sprintf( '<a href="%1$s" class="custom-logo-link" rel="home">%2$s</a>',
 				esc_url( home_url( '/' ) ),
 				wp_get_attachment_image( $custom_logo_id, 'full', false, array(
 					'class'    => 'custom-logo',
@@ -510,7 +510,7 @@ require_once( get_template_directory() . '/ilovewp-admin/helper-functions.php');
 ================================== */
 
 //require only in admin!
-if(is_admin()){	
+if(is_admin()){
 	require_once('ilovewp-admin/ilovewp-theme-settings.php');
 
 	if (current_user_can( 'manage_options' ) ) {

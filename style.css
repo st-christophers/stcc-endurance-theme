@@ -1092,32 +1092,19 @@ td {
 
 *********************************************************************************************/
 a {
-  color: #058dd1;
+  color: #2172c7;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
 a:hover, a:focus {
-  color: #df442a;
+  color: #134e8c;
 }
 
 a:focus {
   outline: 1px dotted;
   outline-offset: 2px;
   text-decoration: underline;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #0d0d0d;
-}
-
-h1 a:hover, h1 a:focus,
-h2 a:hover, h2 a:focus,
-h3 a:hover, h3 a:focus,
-h4 a:hover, h4 a:focus,
-h5 a:hover, h5 a:focus,
-h6 a:hover, h6 a:focus {
-  color: #bf793b;
 }
 
 body {
@@ -1135,7 +1122,7 @@ body {
 
 #container {
   font-size: 1rem;
-  line-height: 1.75em;
+  line-height: 1.6;
   padding: 0;
   text-align: center;
   width: 100%;
@@ -1201,7 +1188,6 @@ div.divider {
 }
 
 #site-logo {
-  flex: 1;
   display: flex;
   padding-right: 40px;
   text-align: left;
@@ -1217,10 +1203,12 @@ div.divider {
 #site-logo .site-titles-container {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
 }
 
 #site-logo .site-title {
   font-size: 1.5rem;
+  line-height: 1.2;
   font-weight: 600;
   letter-spacing: -1px;
   margin-bottom: 0;
@@ -1430,7 +1418,7 @@ div.divider {
 .large-nav .current-menu-item > a,
 .large-nav .current_page_item > a,
 .large-nav .current-menu-parent > a {
-  color: #df442a;
+  color: #2172c7;
 }
 
 .large-nav .current-menu-item > a {
@@ -1438,7 +1426,7 @@ div.divider {
 }
 
 .large-nav .menu-special a {
-  background-color: #df442a;
+  background-color: #2172c7;
   color: #fff;
   padding: 7px 10px;
   -webkit-border-radius: 2px;
@@ -1536,15 +1524,15 @@ div.divider {
 .site-column-aside {
   display: inline-block;
   font-size: 0.875rem;
-  line-height: 1.75em;
+  line-height: 1.6em;
   vertical-align: top;
-  width: 28.57142857%;
+  width: 30%;
 }
 
 .site-column-content {
   display: inline-block;
   vertical-align: top;
-  width: 71.42857142%;
+  width: 70%;
 }
 
 .site-column-aside .site-column-wrapper {
@@ -1567,7 +1555,6 @@ div.divider {
 }
 
 #ilovewp-hero {
-  margin-bottom: 30px;
   position: relative;
 }
 
@@ -1790,7 +1777,7 @@ div.divider {
 
 *********************************************************************************************/
 .page-title {
-  color: #df442a;
+  color: #2172c7;
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
@@ -1834,7 +1821,7 @@ div.divider {
 .archives-content {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.75em;
+  line-height: 1.6em;
   margin: 0 auto;
   text-align: left;
 }
@@ -1887,7 +1874,7 @@ div.divider {
 .entry-content p,
 .textwidget p {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .entry-content p:last-child,
@@ -1896,7 +1883,7 @@ div.divider {
 }
 
 .entry-content img {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .entry-content img.size-full,
@@ -2122,7 +2109,7 @@ div.divider {
 .entry-content ul,
 .entry-content ol {
   list-style-position: inside;
-  margin: 2em 0 2rem;
+  margin: 1em 0 1em 1em;
   padding: 0;
 }
 
@@ -2451,6 +2438,10 @@ div.divider {
   transition: all 0.3s ease-in-out;
 }
 
+.wp-block-media-text img {
+  margin-bottom: 0;
+}
+
 /* Common Widgets Styling */
 .widget {
   margin-bottom: 40px;
@@ -2647,8 +2638,8 @@ div.divider {
 
 .ai1ec-agenda-widget-view .ai1ec-calendar-link:hover,
 .ai1ec-agenda-widget-view .ai1ec-calendar-link:focus {
-  background-color: #df442a;
-  border-color: #df442a;
+  background-color: #2172c7;
+  border-color: #2172c7;
   color: #fff;
 }
 
@@ -2679,7 +2670,7 @@ div.divider {
 
 .site-column-aside .widget_nav_menu .menu-item a:hover,
 .site-column-aside .widget_nav_menu .menu-item a:focus {
-  color: #df442a;
+  color: #2172c7;
   text-decoration: underline;
 }
 
@@ -2715,6 +2706,19 @@ div.divider {
   color: #111;
   font-weight: bold;
   text-decoration: underline;
+}
+
+.site-column-aside .widget_block {
+  padding: 12px;
+  background-color: #eee;
+}
+
+.site-column-aside p, .site-column-aside .wp-block-buttons {
+  margin-bottom: 1rem;
+}
+
+.site-column-aside p:last-child, .site-column-aside .wp-block-buttons:last-child {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -2790,7 +2794,7 @@ div.divider {
 }
 
 .site-breadcrumbs a:hover, .site-breadcrumbs a:focus {
-  color: #df442a;
+  color: #2172c7;
 }
 
 /* Captions */
@@ -2811,6 +2815,11 @@ div.divider {
   background-color: #eee;
   margin-top: 0;
   padding: 1.25rem;
+}
+
+.wp-block-button__link {
+  background-color: #2172c7;
+  border-radius: 4px;
 }
 
 /*--------------------------------------------------------------
@@ -2934,14 +2943,14 @@ div.divider {
 }
 
 .pagination a {
-  color: #df442a;
+  color: #2172c7;
 }
 
 .pagination .current,
 .pagination a:hover,
 .pagination a:focus {
-  background-color: #df442a;
-  border-color: #df442a;
+  background-color: #2172c7;
+  border-color: #2172c7;
   color: #fff;
 }
 
@@ -3056,24 +3065,25 @@ html .ilovewp-slides {
   display: block;
   padding: 0;
   z-index: 10;
-  height: 60px;
-  width: 60px;
+  height: 30px;
+  width: 30px;
   position: absolute;
   top: 45%;
   left: 20px;
 }
 
 .flex-direction-nav .flex-next {
-  background-position: 0 -60px;
+  background-position: 0 -30px;
   left: auto;
   right: 20px;
 }
 
 .flex-direction-nav a {
   background: transparent url(images/sprite-arrows.png) no-repeat top left;
+  background-size: cover;
   display: inline-block;
-  height: 60px;
-  width: 60px;
+  height: 30px;
+  width: 30px;
   padding: 0;
   text-indent: -9999px;
   zoom: 1;
@@ -3097,6 +3107,21 @@ html .ilovewp-slides {
 .flex-direction-nav .flex-next:focus {
   filter: alpha(opacity=100);
   opacity: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .flex-direction-nav .flex-prev,
+  .flex-direction-nav .flex-next {
+    height: 45px;
+    width: 45px;
+  }
+  .flex-direction-nav .flex-next {
+    background-position: 0 -45px;
+  }
+  .flex-direction-nav a {
+    height: 45px;
+    width: 45px;
+  }
 }
 
 /******************************************
@@ -3134,9 +3159,9 @@ html .ilovewp-slides {
 .slicknav_menu .slicknav_icon {
   display: inline-block;
   float: none;
-  width: 20px;
+  width: 15px;
   height: 10px;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 10px;
 }
 
 .slicknav_menu .slicknav_icon:before {
@@ -3154,7 +3179,7 @@ html .ilovewp-slides {
 
 .slicknav_menu .slicknav_icon-bar {
   display: block;
-  width: 20px;
+  width: 15px;
   height: 2px;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -3248,7 +3273,7 @@ html .ilovewp-slides {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #111;
+  background-color: #2172c7;
 }
 
 .slicknav_nav {
@@ -3667,6 +3692,7 @@ html .ilovewp-slides {
   }
 
   .site-section-wrapper-main {
+    padding-top: 2rem;
     padding-bottom: 3rem;
   }
 
