@@ -1182,7 +1182,7 @@ div.divider {
   padding: 0;
   position: relative;
   z-index: 3;
-  /* box-shadow: 0 0 8px rgba(0,0,0,0.07); */ }
+}
 
 .page-header-default #site-masthead {
   padding-bottom: 0;
@@ -1193,21 +1193,30 @@ div.divider {
 }
 
 #site-masthead .site-section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
 #site-logo {
-  display: inline-block;
+  flex: 1;
+  display: flex;
   padding-right: 40px;
   text-align: left;
-  vertical-align: middle;
-  width: 27.27272727%;
+  align-items: center;
 }
 
 #site-logo .custom-logo {
+  width: 80px;
   height: auto;
-  max-width: 100%;
+  margin-right: 12px;
+}
+
+#site-logo .site-titles-container {
+  display: flex;
+  flex-direction: column;
 }
 
 #site-logo .site-title {
@@ -1222,7 +1231,7 @@ div.divider {
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0;
-  margin: 10px 0 0;
+  margin: 0;
 }
 
 .page-header-centered #site-logo,
@@ -1253,10 +1262,7 @@ div.divider {
 
 /* Start Primary Navigation */
 #site-section-primary-menu {
-  display: inline-block;
   text-align: right;
-  vertical-align: middle;
-  width: 72.72727272%;
   z-index: 3;
 }
 
@@ -3624,7 +3630,22 @@ html .ilovewp-slides {
   /* End Main Menu */
   .theme-credit {
     display: none;
-  } }
+  }
+}
+
+/* One-column layout */
+@media screen and (max-width: 768px) {
+  #site-masthead .site-section-wrapper {
+    flex-direction: column;
+  }
+
+  #site-logo {
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
+}
+
 /* All Mobile Sizes (devices and browser) */
 @media screen and (max-width: 640px) {
   .site-archive-posts-3 .site-archive-post .entry-thumbnail {
@@ -3663,7 +3684,9 @@ html .ilovewp-slides {
 
   .site-archive-posts-3 .site-archive-post:last-of-type {
     margin-bottom: 0;
-  } }
+  }
+}
+
 /* All Mobile Sizes (devices and browser) */
 @media screen and (max-width: 480px) {
   .site-section-wrapper {
@@ -3711,7 +3734,22 @@ html .ilovewp-slides {
 
   #site-footer .site-columns-4 .site-column:last-of-type {
     margin-bottom: 0;
-  } }
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  #site-logo {
+    display: block;
+    text-align: center;
+  }
+
+  #site-logo .custom-logo {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}
+
 /* All Mobile Sizes (devices and browser) */
 /* All Mobile Sizes (devices and browser) */
 @media screen and (max-width: 320px) {
