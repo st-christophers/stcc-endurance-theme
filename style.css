@@ -1836,17 +1836,14 @@ div.divider {
 
 .entry-content h1 {
   font-size: 2em;
-  text-transform: uppercase;
 }
 
 .entry-content h2 {
   font-size: 1.5em;
-  text-transform: uppercase;
 }
 
 .entry-content h3 {
   font-size: 1.375em;
-  text-transform: uppercase;
 }
 
 .entry-content h4 {
@@ -3792,3 +3789,41 @@ html .ilovewp-slides {
   .site-archive-posts .has-post-thumbnail .entry-preview-wrapper {
     padding-left: 0;
   } }
+
+/*********************************************************************************************
+
+13. Overrides & Customisations
+
+*********************************************************************************************/
+
+
+.entry-content .wp-block-media-text.is-stacked-on-mobile + .wp-block-media-text.is-stacked-on-mobile {
+  margin-top: 2em;
+}
+
+.entry-content .wp-block-media-text__content {
+  padding: 0;
+}
+
+.entry-content .wp-block-media-text__content h2, .entry-content .wp-block-media-text__content h3 {
+  margin: 0.5em 0;
+}
+
+.entry-content .media-block-rounded .wp-block-media-text__media img {
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .entry-content .media-block-condensed .wp-block-media-text__media img {
+    max-width: 240px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .entry-content .wp-block-media-text .wp-block-media-text__content {
+    margin-left: 2em;
+  }
+  .entry-content .wp-block-media-text .wp-block-media-text__content > :first-child {
+    margin-top: 0;
+  }
+}
