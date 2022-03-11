@@ -1,10 +1,17 @@
 @charset "UTF-8";
 /*********************************************************************************************
 
+<<<<<<< HEAD
 Theme Name: St Christopher's Church (Endurance)
 Theme URI: https://github.com/st-christophers/stcc-endurance-theme
 Description: A Wordpress theme for the St Christopher's Church website. Based on the Endurance theme by https://www.ilovewp.com/.
 Version: 1.0.0
+=======
+Theme Name: Endurance
+Theme URI: https://www.ilovewp.com/themes/endurance/
+Description: Endurance is a free WordPress theme created for church websites, ngo websites, nonprofits, governmental and nongovernmental websites, including but not limited to schools, kindergartens, etc. The homepage can display 3 Featured Pages. Inner pages have an automatic menu that links to your parent and child pages.
+Version: 1.0.10
+>>>>>>> 6d7e63c (Make page titles black, sticky footer)
 Requires PHP: 5.6
 Tested up to: 5.6
 Author: ilovewp & Tom Spencer
@@ -1583,6 +1590,21 @@ div.divider {
   text-transform: uppercase;
 }
 
+/* Sticky footer */
+.site-wrapper-all {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#site-main {
+  flex: 1 0 auto;
+}
+
+#site-masthead, #site-footer-credit {
+  flex: none;
+}
+
 /*********************************************************************************************
 
 5. Page Structure: Content Sections, Blocks, Elements
@@ -1777,7 +1799,6 @@ div.divider {
 
 *********************************************************************************************/
 .page-title {
-  color: #2172c7;
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
