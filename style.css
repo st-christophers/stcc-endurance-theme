@@ -1145,7 +1145,7 @@ body {
   margin: 0 auto;
   padding: 0 60px;
   text-align: left;
-  width: 1100px;
+  width: 1200px;
 }
 
 .site-section-wrapper-footer-credit {
@@ -1214,7 +1214,7 @@ div.divider {
 }
 
 #site-logo .site-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: -1px;
@@ -1223,7 +1223,7 @@ div.divider {
 }
 
 #site-logo .site-description {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0;
   margin: 0;
@@ -1325,7 +1325,7 @@ div.divider {
 
 .large-nav > .menu-item {
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0 0.5rem;
   position: relative;
@@ -1800,7 +1800,7 @@ div.divider {
 *********************************************************************************************/
 .page-title {
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.4em;
   margin-bottom: 3rem;
