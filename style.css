@@ -1920,6 +1920,10 @@ div.divider {
   height: auto;
 }
 
+.entry-content .wp-block-embed-youtube {
+  max-width: 700px;
+}
+
 .entry-content iframe {
   max-width: 100%;
 }
@@ -2459,6 +2463,8 @@ div.divider {
 .wp-block-media-text img {
   margin-bottom: 0;
 }
+
+
 
 /* Common Widgets Styling */
 .widget {
