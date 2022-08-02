@@ -1908,10 +1908,21 @@ div.divider {
 .entry-content img.alignnone,
 .entry-content img.aligncenter,
 .entry-content img.alignleft,
-.entry-content img.alignright {
+.entry-content img.alignright,
+.entry-content figure.size-full img,
+.entry-content figure.alignnone img,
+.entry-content figure.aligncenter img,
+.entry-content figure.alignleft img,
+.entry-content figure.alignright img {
   max-width: 100%;
   width: auto;
   height: auto;
+}
+
+.entry-content img.aligncenter,
+.entry-content figure.aligncenter img {
+  display: block;
+  margin: 0 auto;
 }
 
 .entry-content .wp-block-image img,
