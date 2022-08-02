@@ -3750,6 +3750,10 @@ html .ilovewp-slides {
 
 /* All Mobile Sizes (devices and browser) */
 @media screen and (max-width: 480px) {
+  #site-logo .site-title {
+    font-size: 1.5rem;
+  }
+
   .site-section-wrapper {
     padding-right: 30px;
     padding-left: 30px;
